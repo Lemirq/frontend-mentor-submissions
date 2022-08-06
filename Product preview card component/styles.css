@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --f: 14px;
+    --fraunces: 'Fraunces', serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--cream);
+}
+
+#card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 720px;
+    height: auto;
+    background: white;
+    border-radius: 20px;
+}
+
+
+#product-img-d {
+    width: 50%;
+    height: auto;
+    border-radius: 20px 0 0 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    padding: 40px;
+    gap: 30px;
+}
+
+.label {
+    letter-spacing: 0.325em;
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+
+}
+
+h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--very-dark-blue);
+
+}
+
+.desc {
+    color: var(--dark-grayish-blue);
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.price {
+    font-family: var(--fraunces);
+    font-size: 40px;
+    color: var(--dark-cyan);
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: var(--dark-cyan);
+    color: white;
+
+    padding: 20px 0;
+    gap: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background: var(--very-dark-blue);
+    color: white;
+}
+
+button>img {
+    width: 16px;
+    height: auto;
+}
+
+#product-img-m {
+    display: none;
+}
+
+@media screen and (max-width: 1430px) {
+    #card {
+        width: 720px;
+        max-width: 99999px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #product-img-m {
+        display: block;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    #product-img-d {
+        display: none;
+    }
+
+    #card {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+    }
+
+    .info {
+        width: 100%;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    h4 {
+        font-size: 33px;
+    }
+}
