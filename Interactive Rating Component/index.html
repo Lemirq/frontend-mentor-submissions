@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Rating Component</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main role="main">
+        <section id="card" class="card">
+            <section class="left">
+                <div class="star"><img src="images/icon-star.svg" alt=""></div>
+                <h1>How did we do?</h1>
+                <p>Please let us know how we did with your support request. All feedback is appreciated to help us
+                    improve
+                    our offering!</p>
+            </section>
+            <section class="input">
+                <button id="1" class="rate"><span class="square">1</span></button>
+                <button id="2" class="rate"><span class="square">2</span></button>
+                <button id="3" class="rate"><span class="square">3</span></button>
+                <button id="4" class="rate"><span class="square">4</span></button>
+                <button id="5" class="rate"><span class="square">5</span></button>
+            </section>
+            <button class="btn">Submit</button>
+        </section>
+        <section class="card2" id="validation">
+            <img class="illustration" src="images/illustration-thank-you.svg">
+            <p class="indicate">You selected <span id="rating">4</span> out of 5</p>
+            <h1>Thank you!</h1>
+            <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get
+                in
+                touch!</p>
+        </section>
+    </main>
+</body>
+
+</html>
