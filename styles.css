@@ -29,7 +29,8 @@ h5,
 h6,
 p,
 div,
-li {
+li,
+textarea {
     letter-spacing: -0.04em;
 }
 
