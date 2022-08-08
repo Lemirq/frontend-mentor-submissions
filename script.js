@@ -1,4 +1,4 @@
-const data = [
+const cards = [
 	{
 		name: 'Responsive OR Code Card Component using CSS Flexbox',
 		difficulty: 'newbie',
@@ -31,10 +31,10 @@ const data = [
 	},
 ];
 
-for (let i = 0; i < data.length; i++) {
+for (let i = 0; i < cards.length; i++) {
 	const html = `
-	<div onclick="window.open('${data[i].url}')" class="card ${data[i].difficulty}">
-	${data[i].name}
+	<div onclick="window.open('${cards[i].url}')" class="card ${cards[i].difficulty}">
+	${cards[i].name}
 	</div>
 	`;
 	document.querySelector('.grid').insertAdjacentHTML('beforeend', html);
