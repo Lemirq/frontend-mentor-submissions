@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Card Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<body>
+    <img src="images/bg-main-desktop.png" alt="Desktop background gradient" id="bg">
+    <main>
+        <section oncontextmenu="return false" id="card-container">
+            <div id="front">
+                <img src="images/card-logo.svg" id="card-logo" alt="Credit Card Logo">
+                <p id="number">0000 0000 0000 0000</p>
+                <p id="name">jane appleseed</p>
+                <p id="expiry"><span id="m">00</span>/<span id="y">00</span></p>
+            </div>
+            <div id="back">
+                <p id="cvv">000</p>
+            </div>
+        </section>
+        <section class="content" id="cardForm">
+            <form>
+                <div class="container" id="CardholderNameContainer">
+                    <label for="CardholderName" class="context">cardholder name</label>
+                    <input class="input" type="text" id="CardholderName" name="CardholderName"
+                        placeholder="e.g. Jane Appleseed">
+                    <label id="errCardholderName" class="error" for="CardholderName"></label>
+                </div>
+                <div class="container" id="CardNumberContainer">
+                    <label for="CardholderNumber" class="context">card number</label>
+                    <input maxlength="19" class="input" type="text" id="CardholderNumber" name="CardholderNumber"
+                        placeholder="e.g. 1234 5678 9123 0000">
+                    <label id="errCardholderNumber" class="error" for="CardholderNumber"></label>
+                </div>
+                <div id="lastRow">
+                    <div class="container" id="CardDetailsContainer">
+                        <label for="CardExpiryM" class="context">EXP. DATE (MM/YY)</label>
+                        <div class="row">
+                            <input maxlength="2" class="input" type="text" id="CardExpiryM" name="CardExpiryM"
+                                placeholder="MM">
+                            <input maxlength="2" class="input" type="text" id="CardExpiryY" name="CardExpiryY"
+                                placeholder="YY">
+                        </div>
+                        <label id="errCardExpiryM" class="error" for="CardExpiryM"></label>
+                    </div>
+                    <div class="container" id="CardCVCContainer">
+                        <label for="CardCVC" class="context">CVC</label>
+                        <input maxlength="3" class="input" type="text" id="CardCVC" name="CardCVC"
+                            placeholder="e.g. 123">
+                        <label id="errCardCVC" class="error" for="CardCVC"></label>
+                    </div>
+                </div>
+                <button class="btn" id="submit" type="submit">Confirm</button>
+            </form>
+        </section>
+        <section class="content" id="validated">
+            <img class="completed" src="images/icon-complete.svg" alt="Completed icon">
+            <h3>Thank you!</h3>
+            <p>We've added your card details</p>
+            <a href="https://lemirq.github.io/frontend-mentor-submissions"><button class="btn">Continue</button></a>
+        </section>
+    </main>
+</body>
+
+</html>

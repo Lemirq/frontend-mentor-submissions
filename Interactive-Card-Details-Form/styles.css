@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --linear-gradient-active-input-border: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --red-input-errors: hsl(0, 100%, 66%);
+
+    --c-white: hsl(0, 0%, 100%);
+    --c-light-grayish-violet: hsl(270, 3%, 87%);
+    --c-dark-grayish-violet: hsl(279, 6%, 55%);
+    --c-very-dark-violet: hsl(278, 68%, 11%);
+    --front: url('images/bg-card-front.png');
+    --back: url('images/bg-card-back.png');
+
+    --f-body: 18px;
+    --f-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+    font-family: var(--f-family);
+    font-weight: 500;
+    font-size: var(--f-body);
+}
+
+body {
+    margin: 0;
+    background: var(--c-white);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#bg {
+    position: fixed;
+    height: 100vh;
+    width: auto;
+    z-index: -1;
+}
+
+#card-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
+}
+
+#front {
+    width: 447px;
+    height: 245px;
+    background: var(--front);
+    border-radius: 12px;
+    position: relative;
+}
+
+#back {
+    position: relative;
+    margin-left: 200px;
+    width: 447px;
+    height: 245px;
+    background: var(--back);
+    box-shadow: 50px 50px 200px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+#card-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#front *,
+#back * {
+    color: white;
+    margin: 0;
+}
+
+#name,
+#expiry {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.137em;
+    font-size: 15px;
+    position: absolute;
+    bottom: 25px;
+}
+
+#expiry * {
+    font-weight: 300;
+    letter-spacing: 0.137em;
+    font-size: 15px;
+}
+
+#name {
+    left: 30px;
+}
+
+#expiry {
+    right: 30px;
+}
+
+#number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.137em;
+}
+
+#cvv {
+    position: absolute;
+    top: 111px;
+    right: 60px;
+    font-size: 15px;
+    letter-spacing: 0.083em;
+    font-weight: 300;
+}
+
+form {
+    max-width: 400px;
+}
+
+#validated>a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.completed {
+    margin-bottom: 40px;
+}
+
+#validated {
+    display: none;
+    padding: 0 10%;
+}
+
+#validated>h3 {
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    color: var(--c-very-dark-violet);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#validated>p {
+    color: var(--c-dark-grayish-violet);
+    letter-spacing: 0.04em;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    height: calc(+ 25px);
+}
+
+.context {
+    text-transform: uppercase;
+    letter-spacing: 0.169em;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.error {
+    font-size: 11px;
+    letter-spacing: 0.015em;
+    margin-top: 5px;
+    color: var(--red-input-errors);
+}
+
+.input {
+    padding: 10px 15px;
+    border: 1px solid var(--c-light-grayish-violet);
+    border-radius: 8px;
+    width: calc(100% - 31px);
+    transition: border 0.3s ease;
+}
+
+.error {
+    transition: display 0.3s ease;
+}
+
+
+.input:focus {
+    outline: none;
+    border: 1px solid var(--c-very-dark-violet);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#lastRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#CardCVCContainer,
+#CardDetailsContainer {
+    width: 50%;
+}
+
+
+.btn {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--c-very-dark-violet);
+    padding: 15px;
+    color: var(--c-white);
+    border: none;
+}
+
+@media only screen and (max-width: 1150px) {
+    #back {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #back {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #bg {
+        position: fixed;
+        height: 33vh;
+        width: 100vw;
+        top: 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #front,
+    #back {
+        width: 75%;
+        height: 160px;
+        box-shadow: none;
+        background-size: 100% 100%;
+        border-radius: 5px;
+    }
+
+    #front {
+        order: 2;
+        margin-top: -100px;
+        margin-left: -55px;
+    }
+
+    #back {
+        margin-left: 55px;
+    }
+
+    #card-container {
+        margin-top: 30px;
+        height: auto;
+        width: 100vw;
+    }
+
+    #card-logo {
+        width: 50px;
+        height: auto;
+        top: 20px;
+        left: 20px;
+    }
+
+    #number,
+    #name {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    #expiry {
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+    #number {
+        font-size: 18px;
+        letter-spacing: 0.121em;
+        bottom: 48px;
+    }
+
+    #cvv {
+        top: 72px;
+        left: 228px;
+    }
+
+    #name,
+    #cvv,
+    #expiry,
+    #y,
+    #m {
+        font-size: 10px;
+    }
+
+    #cardForm,
+    #validated {
+        width: 88vw;
+        padding-top: 20px;
+    }
+
+    #validated {
+        padding-top: 50px;
+        justify-content: flex-start;
+    }
+
+    #validated>p {
+        margin-top: 14px;
+        margin-bottom: 47px;
+    }
+
+    .completed {
+        margin-bottom: 35px;
+    }
+
+    #cardCVC {
+        margin-bottom: 10px;
+    }
+
+    .container {
+        margin-bottom: 19px;
+    }
+}
