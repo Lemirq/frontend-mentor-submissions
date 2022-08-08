@@ -1,3 +1,45 @@
+const data = [
+	{
+		name: 'Responsive OR Code Card Component using CSS Flexbox',
+		difficulty: 'newbie',
+		url: './QR Code Component/index.html',
+	},
+	{
+		name: 'Responsive Product Preview Card Component using CSS Flexbox',
+		difficulty: 'newbie',
+		url: './Product preview card component/index.html',
+	},
+	{
+		name: 'Interactive Rating Component with CSS Flexbox',
+		difficulty: 'newbie',
+		url: './Interactive Rating Component/index.html',
+	},
+	{
+		name: 'Responsive NFT Preview Card Component using CSS Flexbox & CSS Grid',
+		difficulty: 'newbie',
+		url: './NFT Preview Card Component/index.html',
+	},
+	{
+		name: 'Responsive Order Summary Component with CSS Flexbox & CSS Grid',
+		difficulty: 'newbie',
+		url: './Order Summary Component/index.html',
+	},
+	{
+		name: 'Interactive and Responsive Card Details Form with CSS Flexbox',
+		difficulty: 'junior',
+		url: './Interactive Card Details Form/index.html',
+	},
+];
+
+for (let i = 0; i < data.length; i++) {
+	const html = `
+	<div onclick="window.open('${data[i].url}')" class="card ${data[i].difficulty}">
+	${data[i].name}
+	</div>
+	`;
+	document.querySelector('.grid').insertAdjacentHTML('beforeend', html);
+}
+
 const newbie = document.getElementById('newbie');
 const junior = document.getElementById('junior');
 const intermediate = document.getElementById('intermediate');

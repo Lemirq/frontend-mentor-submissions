@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --c-pale-blue: hsl(225, 100%, 94%);
+    --c-bright-blue: hsl(245, 75%, 52%);
+    --c-bright-blue-hover: hsla(245, 75%, 52%, 0.5);
+    --c-very-pale-blue: hsl(225, 100%, 98%);
+    --c-desaturated-blue: hsl(224, 23%, 55%);
+    --c-dark-blue: hsl(223, 47%, 23%);
+    --f: 16px
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+    background: var(--c-pale-blue);
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wave {
+    background: url(images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.card {
+    width: 454px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.content {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 30px;
+    color: var(--c-dark-blue);
+    letter-spacing: -0.017em;
+    margin-bottom: 20px;
+}
+
+.desc {
+    text-align: center;
+    font-size: var(--f);
+    color: var(--c-desaturated-blue);
+    font-weight: 300;
+    letter-spacing: 0.005em;
+    line-height: 1.5;
+}
+
+.plan {
+    padding: 20px;
+    background: var(--c-very-pale-blue);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+h4 {
+    font-size: 18px;
+    letter-spacing: -0.04em;
+    color: var(--c-dark-blue);
+}
+
+.price {
+    color: var(--c-desaturated-blue);
+}
+
+.right {
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-color: var(--c-bright-blue);
+    color: var(--c-bright-blue);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.right:hover {
+    text-decoration: none;
+    color: var(--c-bright-blue-hover);
+}
+
+.btn-primary:hover {
+    background: var(--c-bright-blue-hover);
+}
+
+.btn-secondary:hover {
+    color: var(--c-dark-blue);
+}
+
+.btn-primary {
+    box-shadow: 0px 15px 25px rgba(57, 42, 225, 0.25);
+    background: var(--c-bright-blue);
+    color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    width: 100%;
+    transition: background 0.2s ease-in-out;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--c-desaturated-blue);
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    width: 100%;
+    transition: color 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 540px) {
+    .card {
+        width: 87%;
+    }
+
+    h3 {
+        font-size: 23px;
+        letter-spacing: -0.01em;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.062em;
+    }
+
+    .content {
+        padding: 30px 30px;
+    }
+
+    h4,
+    .price,
+    .right {
+        font-size: 14px;
+    }
+
+    .plan {
+        margin-bottom: 0;
+    }
+
+    .btn-secondary {
+        margin: 5px;
+    }
+}
