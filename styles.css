@@ -2,6 +2,7 @@
 
 :root {
     --f-heading: clamp(40px, 6vw, 55px);
+    --lightness: 80%;
 }
 
 body {
@@ -47,7 +48,6 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 .socials * {
@@ -65,6 +65,7 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    gap: 20px;
 }
 
 .card-container {
@@ -75,7 +76,7 @@ h1 {
     margin-top: 50px;
 }
 
-.row {
+.grid {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -94,7 +95,7 @@ h1 {
     align-items: center;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
 
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
@@ -117,7 +118,7 @@ h1 {
 supported by Chrome, Edge, Opera and Firefox */
 
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -135,4 +136,75 @@ p {
     font-size: 15px;
     color: #464646;
     margin-top: 15px;
+}
+
+.newbie,
+#newbie {
+    background: hsla(230, 100%, var(--lightness));
+}
+
+.newbie:hover {
+    box-shadow: 0px 10px 40px rgba(153, 170, 255, 0.4);
+}
+
+.junior,
+#junior {
+    background: hsl(147, 100%, var(--lightness));
+}
+
+.junior:hover {
+    box-shadow: 0px 10px 40px rgba(153, 255, 199, 0.4);
+}
+
+.intermediate,
+#intermediate {
+    background: hsl(40, 100%, var(--lightness));
+}
+
+.intermediate:hover {
+    box-shadow: 0px 10px 40px rgba(255, 221, 153, 0.4);
+}
+
+.advanced,
+#advanced {
+    background: hsl(17, 100%, var(--lightness));
+}
+
+.advanced:hover {
+    box-shadow: 0px 10px 40px rgba(255, 182, 153, 0.4);
+}
+
+.guru,
+#guru {
+    background: hsl(0, 100%, var(--lightness));
+}
+
+.guru:hover {
+    box-shadow: 0px 10px 40px rgba(255, 153, 153, 0.4);
+}
+
+#legend {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.legend-item:hover {
+    --lightness: 70%;
+    cursor: pointer;
+}
+
+#clear {
+    color: #007aff;
 }
