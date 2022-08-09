@@ -158,3 +158,5 @@ clear.addEventListener('click', () => {
 		}, 1100);
 	}
 });
+
+// This comment is here because github pages is being dumb
