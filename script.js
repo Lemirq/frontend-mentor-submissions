@@ -5,6 +5,11 @@ const cards = [
 		url: './Interactive Card Details Form/index.html',
 	},
 	{
+		name: '3 Column Preview Card Component with Tailwind CSS',
+		difficulty: 'newbie',
+		url: './3 Column Preview Card Component/index.html',
+	},
+	{
 		name: 'Responsive OR Code Card Component using CSS Flexbox',
 		difficulty: 'newbie',
 		url: './QR Code Component/index.html',

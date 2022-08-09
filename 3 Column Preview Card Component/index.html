@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Column Preview Card Component</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'bsd': ['"Big Shoulders Display"', 'sans-serif'],
+                    'ld': ['"Lexend Deca"', 'sans-serif']
+                },
+
+                fontSize: {
+                    'p': '15px',
+                    'h': '40px'
+                },
+                colors: {
+                    'bright-orange': 'hsl(31, 77%, 52%)',
+                    'dark-cyan': 'hsl(184, 100%, 22%)',
+                    'very-dark-cyan': 'hsl(179, 100%, 13%)',
+                    'white-p': 'hsla(0, 0%, 100%, 0.75)',
+                    'white-h': 'hsl(0, 0%, 95%)',
+                    'transparent': 'transparent'
+                },
+                screens: {
+                    'sm': '640px',
+                    'md': '980px',
+                    'lg': '1024px',
+                    'xl': '1280px'
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="grid place-items-center min-h-[100vh] w-screen bg-white-h">
+    <main class="container grid grid-cols-3 text-white-h max-w-4xl">
+        <section class="one rounded-tl-lg rounded-bl-lg bg-bright-orange px-12 py-[40px] z-50">
+            <div class="flex flex-col justify-center items-start mb-[80px]">
+                <img class="animate__animated animate__fadeInLeft" src="images/icon-sedans.svg" alt="Icon of a sedan">
+                <h3
+                    class="uppercase font-bsd text-h text-white tracking-[0.025em] mt-7 mb-4 animate__animated animate__fadeInLeft">
+                    Sedans</h3>
+                <p
+                    class="leading-[25px] font-ld tracking-wide weight-100 text-p text-white-p animate__animated animate__fadeInLeft">
+                    Choose a sedan for its
+                    affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
+                </p>
+            </div>
+            <button
+                class="hover:bg-transparent hover:text-white-p hover:border-2 border-2 border-white-p rounded-full px-8 py-3 text-bright-orange bg-white-h animate__animated animate__zoomIn transition-colors">Learn
+                More</button>
+        </section>
+        <section class="two bg-dark-cyan px-12 py-[40px] z-20">
+            <div class="flex flex-col justify-center items-start mb-[80px]">
+                <img class="animate__animated animate__fadeInLeft" src="images/icon-suvs.svg" alt="Icon of a SUV">
+                <h3
+                    class="uppercase font-bsd text-h text-white tracking-[0.025em] mt-7 mb-4 animate__animated animate__fadeInLeft">
+                    suvs</h3>
+                <p
+                    class="leading-[25px] font-ld tracking-wide weight-100 text-p text-white-p animate__animated animate__fadeInLeft">
+                    Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+                    and off-road
+                    adventures.</p>
+            </div>
+            <button
+                class="hover:bg-transparent hover:text-white-p hover:border-2 border-2 border-white-p rounded-full px-8 py-3 text-dark-cyan bg-white-h animate__animated animate__zoomIn transition-colors">Learn
+                More</button>
+        </section>
+        <section class="three rounded-tr-lg rounded-br-lg bg-very-dark-cyan px-12 py-[40px]">
+            <div class="flex flex-col justify-center items-start mb-[80px]">
+                <img class="animate__animated animate__fadeInLeft" src="images/icon-luxury.svg"
+                    alt="Icon of a Luxury car">
+                <h3
+                    class="uppercase font-bsd text-h text-white tracking-[0.025em] mt-7 mb-4 animate__animated animate__fadeInLeft">
+                    luxury</h3>
+                <p
+                    class="leading-[25px] font-ld tracking-wide weight-100 text-p text-white-p animate__animated animate__fadeInLeft">
+                    Cruise in the best car
+                    brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in
+                    style.
+                </p>
+            </div>
+            <button
+                class="hover:bg-transparent hover:text-white-p hover:border-2 border-2 border-white-p rounded-full px-8 py-3 text-very-dark-cyan bg-white-h animate__animated animate__zoomIn transition-colors">Learn
+                More</button>
+        </section>
+
+    </main>
+    <script>
+        if (window.innerWidth < 980) {
+            cont = document.querySelector('.container');
+            one = document.querySelector('.one');
+            three = document.querySelector('.three');
+
+
+            cont.classList.remove('grid-cols-3');
+            cont.classList.add('grid-rows-3');
+            cont.classList.remove('max-w-4xl');
+            cont.classList.add('max-w-4xl');
+
+            document.body.classList.add('px-5', 'py-20');
+
+            one.classList.remove('rounded-bl-lg');
+            one.classList.add('rounded-tr-lg');
+            three.classList.remove('rounded-tr-lg');
+            three.classList.add('rounded-bl-lg');
+
+
+            arr = ['.one', '.two', '.three'];
+            for (i = 0; i < arr.length; i++) {
+                document.querySelector(arr[i] + '>.flex').classList.remove('mb-[80px]');
+                document.querySelector(arr[i] + '>.flex').classList.add('mb-[30px]');
+            }
+        }
+    </script>
+</body>
+
+</html>
