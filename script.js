@@ -10,7 +10,7 @@ const cards = [
 		url: './3 Column Preview Card Component/index.html',
 	},
 	{
-		name: 'Responsive OR Code Card Component using CSS Flexbox',
+		name: 'Responsive QR Code Card Component using CSS Flexbox',
 		difficulty: 'newbie',
 		url: './QR Code Component/index.html',
 	},
