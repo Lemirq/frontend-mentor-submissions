@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+    <title>Clipboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ce7a94f6f0.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="loader">
+        <div id="loader-cont">
+            <svg id="circle" width="125" height="125" viewbox="0 0 125 125" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_124_2)">
+                    <path id="f"
+                        d="M62.5 4.99999C30.7436 4.99999 5.00001 30.7436 5.00001 62.5C5 94.2564 30.7436 120 62.5 120C94.2564 120 120 94.2564 120 62.5C120 30.7436 94.2564 5 62.5 4.99999Z"
+                        stroke="#26BBA4" stroke-width="10" />
+                    <path id="c"
+                        d="M86.481 86.481C73.789 99.173 53.211 99.173 40.519 86.481C27.827 73.789 27.827 53.211 40.519 40.519C53.211 27.827 73.789 27.827 86.481 40.519"
+                        stroke="#26BBA4" stroke-width="10" stroke-linecap="round" />
+                </g>
+                <defs>
+                    <clippath id="clip0_124_2">
+                        <rect width="125" height="125" fill="white" transform="translate(125 125) rotate(-180)" />
+                    </clippath>
+                </defs>
+            </svg>
+        </div>
+
+
+    </div>
+    <section id="hero">
+        <div class="bg"></div>
+        <img class="logo" src="images/logo.svg" alt="Clipboard logo">
+        <div class="text-container">
+            <h1 data-order="1" class="animate__animated">A history of everything you copy</h1>
+            <p data-order="2" class="animate__animated">Clipboard allows you to track and organize
+                everything you
+                copy. Instantly access your
+                clipboard on all
+                your
+                devices.</p>
+        </div>
+        <div data-order="3" class="btn-container animate__animated">
+            <button class="ios btn">Download for iOS</button>
+            <button class="mac btn">Download for Mac</button>
+        </div>
+    </section>
+    <section id="keep-track">
+        <div class="text-container">
+            <h2 data-order="4" class="animate__animated">Keep track of your snippets</h2>
+            <p data-order="5" class="animate__animated">Clipboard instantly stores any item you copy
+                in the cloud,
+                meaning you can access
+                your snippets
+                immediatety
+                on all your devices. Our Mac and IOS apps will help you organize everything.</p>
+        </div>
+        <div class="features">
+            <img data-aos="fade-right" class="computer animate__animated" src="images/image-computer.png"
+                alt="Image of a computer">
+            <ul id="feature-list">
+                <li data-aos="fade-down" class="feature-item">
+                    <h3>Quick Search</h3>
+                    <p class="small">Easily search your snippets by content, category. web address, application, and
+                        more.
+                    </p>
+                </li>
+                <li data-aos="fade-down" class="feature-item">
+                    <h3>iCloud Sync</h3>
+                    <p class="small">Instantly saves and syncs snippets a your devices.</p>
+                </li>
+                <li data-aos="fade-down" class="feature-item">
+                    <h3>Complete History</h3>
+                    <p class="small">Retrieve any snippets from the test moment you started using the app.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="access-clipboard">
+        <div class="text-container">
+            <h2 data-aos="fade-up">Access Clipboard Anywhere</h2>
+            <p data-aos="fade-up">Whether you're on the go, or at your computer, you can access all your Clipboard
+                snippets in a few simple
+                clicks.</p>
+        </div>
+        <img data-aos="fade-up" src="images/image-devices.png" alt="Image of an iPhone and an iPad">
+    </section>
+    <section id="supercharge-workflow">
+        <div class="text-container">
+            <h2 data-aos="fade-up">Supercharge your workflow</h2>
+            <p data-aos="fade-up">We've got the tools to boost your productivity.</p>
+        </div>
+        <ul id="feature-h-list">
+            <li data-aos="fade-up" data-aos-delay="300" class="feature-h-item">
+                <img class="icon-big" src="images/icon-blacklist.svg" alt="">
+                <h3>Create blacklists</h3>
+                <p class="small">Ensure sensitive information never makes its way to your clipboard by excluding
+                    certain sources.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="600" class="feature-h-item">
+                <img class="icon-big" src="images/icon-text.svg" alt="">
+                <h3>Plain text snippets</h3>
+                <p class="small">Remove unwanted formatting from copied text for a consistent look.</p>
+            </li>
+            <li data-aos="fade-up" data-aos-delay="900" class="feature-h-item">
+                <img class="icon-big" src="images/icon-preview.svg" alt="">
+                <h3>Sneak preview</h3>
+                <p class="small">Quick preview of all snippets on your Clipboard for easy access.</p>
+            </li>
+        </ul>
+    </section>
+    <section id="companies">
+        <img data-aos="fade-up" data-aos-delay="" src="images/logo-google.png" alt="Google logo">
+        <img data-aos="fade-up" data-aos-delay="100" src="images/logo-ibm.png" alt="IBM Logo">
+        <img data-aos="fade-up" data-aos-delay="200" src="images/logo-microsoft.png" alt="Microsoft Logo">
+        <img data-aos="fade-up" data-aos-delay="300" src="images/logo-hp.png" alt="Hewlett Packard Enterprise Logo">
+        <img data-aos="fade-up" data-aos-delay="400" src="images/logo-vector-graphics.png" alt="Vector Graphics Logo">
+    </section>
+    <section id="download">
+        <div class="text-container">
+            <h2 data-aos="fade-up">Clipboard for iOS and Mac OS</h2>
+            <p data-aos="fade-up">Available for free on the App Store. Download for Mac or iOS, sync with iCloud and
+                you're ready to start
+                adding to your clipboard.</p>
+        </div>
+        <div class="btn-container">
+            <button data-aos="fade-right" class="ios btn">Download for iOS</button>
+            <button data-aos="fade-left" class="mac btn">Download for Mac</button>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="left">
+            <img onclick="window.open('https:\/\/lemirq.github.io', '_self')" src="images/logo.svg"
+                alt="Clipboard Logo">
+            <ul class="quicklinks">
+                <div class="col">
+                    <li onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="quicklink">FAQs</li>
+                    <li onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="quicklink">Contact Us</li>
+                </div>
+                <div class="col">
+                    <li onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="quicklink">Privacy Policy
+                    </li>
+                    <li onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="quicklink">Press Kit</li>
+                </div>
+                <div class="col">
+                    <li onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="quicklink">Install Guide
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <div class="right">
+            <i onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="fa-brands fa-facebook"></i>
+            <i onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="fa-brands fa-twitter"></i>
+            <i onclick="window.open('https:\/\/lemirq.github.io', '_self')" class="fa-brands fa-instagram"></i>
+        </div>
+    </footer>
+</body>
+
+
+</html>

@@ -1,5 +1,10 @@
 const cards = [
 	{
+		name: 'Clipboard App Landing Page with CSSFlex, Anime.js, AOS, animate.style',
+		difficulty: 'junior',
+		url: './Clipboard Landing Page/index.html',
+	},
+	{
 		name: 'Interactive and Responsive Card Details Form with CSS Flexbox',
 		difficulty: 'junior',
 		url: './Interactive Card Details Form/index.html',
