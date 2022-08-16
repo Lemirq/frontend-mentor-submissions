@@ -31,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 150px;
+    background: white;
 }
 
 #hero {
