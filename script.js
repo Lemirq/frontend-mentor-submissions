@@ -230,3 +230,5 @@ clear.addEventListener('click', () => {
 		}, timing);
 	}
 });
+
+// Again, this is here because github pages is being a pain.
