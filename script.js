@@ -231,4 +231,11 @@ clear.addEventListener('click', () => {
 	}
 });
 
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	document.querySelector('[type="image/x-icon"]').setAttribute('href', './logo-white.svg');
+	console.log('dark');
+} else {
+	document.querySelector('[type="image/x-icon"]').setAttribute('href', './logo-black.svg');
+}
+
 // Again, this is here because github pages is being a pain.
