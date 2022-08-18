@@ -12,7 +12,7 @@ const cards = [
 	{
 		name: 'Profile Card Component with CSS Flexbox & Grid',
 		difficulty: 'newbie',
-		url: './Profile card component/index.html',
+		url: './Profile Card Component/index.html',
 	},
 	{
 		name: '3 Column Preview Card Component with Tailwind CSS',
