@@ -10,7 +10,7 @@ const cards = [
 		url: './Interactive Card Details Form/index.html',
 	},
 	{
-		name: 'Profile Card Component with CSS Flexbox & Grid',
+		name: 'Profile Card Component with CSS Flexbox & Grid (Lucifer Themed + Custom Design)',
 		difficulty: 'newbie',
 		url: './Profile Card Component/index.html',
 	},
