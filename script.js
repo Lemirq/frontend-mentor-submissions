@@ -214,20 +214,30 @@ guru.addEventListener('click', () => {
 	}, timing);
 });
 
+const test = [];
 clear.addEventListener('click', () => {
 	getTiming();
-	for (let i = 0; i < filterArray.length; i++) {
-		const element = filterArray[i];
-		element.style.setProperty('--lightness', '80%');
-	}
 	for (let i = 0; i < grid.length; i++) {
-		grid[i].classList.remove('animate__fadeIn');
-		grid[i].classList.add('animate__fadeOut');
-		setTimeout(() => {
-			grid[i].classList.remove('animate__fadeOut');
-			grid[i].style.display = 'flex';
-			grid[i].classList.add('animate__fadeIn');
-		}, timing);
+		if (grid[i].style.display == 'none') {
+			test.push(false);
+		} else {
+			test.push(true);
+		}
+	}
+	if (test.includes(false)) {
+		for (let i = 0; i < filterArray.length; i++) {
+			const element = filterArray[i];
+			element.style.setProperty('--lightness', '80%');
+		}
+		for (let i = 0; i < grid.length; i++) {
+			grid[i].classList.remove('animate__fadeIn');
+			grid[i].classList.add('animate__fadeOut');
+			setTimeout(() => {
+				grid[i].classList.remove('animate__fadeOut');
+				grid[i].style.display = 'flex';
+				grid[i].classList.add('animate__fadeIn');
+			}, timing);
+		}
 	}
 });
 

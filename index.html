@@ -11,27 +11,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ce7a94f6f0.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
-    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="shortcut icon" href="./logo-black.svg" type="image/x-icon">
 </head>
 
 <body>
-    <div id="desc">
+    <header id="header">
         <h1>FrontEnd Mentor Submissions</h1>
-        <h2>Vihaan Sharma | <li onclick="window.open('https:\/\/lemirq.github.io')"
-                class="social fa-solid fa-house-chimney"></li>
-            <li onclick="window.open('https:\/\/github.com/Lemirq')" class="social fa-brands fa-github"></li>
-        </h2>
-    </div>
+        <ul class="desc">
+            <li id="name" class="desc-item">Vihaan Sharma</li>
+            <div class="icons">
+                <li onclick="window.open('https:\/\/lemirq.github.io')"
+                    class="desc-item social fa-solid fa-house-chimney">
+                </li>
+                <li onclick="window.open('https:\/\/github.com/Lemirq')" class="desc-item social fa-brands fa-github">
+                </li>
+            </div>
+        </ul>
+    </header>
     <ul class="animate__animated animate__zoomIn" id="legend">
-        <li id="newbie" class="legend-item">Newbie</li>
-        <li id="junior" class="legend-item">Junior</li>
-        <li id="intermediate" class="legend-item">Intermediate</li>
-        <li id="advanced" class="legend-item">Advanced</li>
-        <li id="guru" class="legend-item">Guru</li>
-        <li id="clear" class="legend-item">Clear Filters</li>
+        <button id="newbie" class="legend-item">Newbie</button>
+        <button id="junior" class="legend-item">Junior</button>
+        <button id="intermediate" class="legend-item">Intermediate</button>
+        <button id="advanced" class="legend-item">Advanced</button>
+        <button id="guru" class="legend-item">Guru</button>
+        <button id="clear" class="legend-item">Clear Filters</button>
     </ul>
     <div class="card-container">
         <div class="grid">

@@ -11,30 +11,60 @@
 </head>
 
 <body>
-    <img class="circle-top" src="images/bg-pattern-top.svg" alt="">
-    <img class="circle-bottom" src="images/bg-pattern-bottom.svg" alt="">
-    <div class="card">
-        <img class="headerImg" src="images/bg-pattern-card.svg" alt="">
-        <img class="pfp" src="images/image-victor.jpg" alt="Picture of Victor Crest">
-        <header>
-            <h3>Victor Crest <span class="person__age">26</span></h3>
-            <h4 class="person__city">London</h4>
-        </header>
-        <ul class="social__details">
-            <li class="stat">
-                <h2>80K</h2>
-                <p>Followers</p>
-            </li>
-            <li class="stat">
-                <h2>803K</h2>
-                <p>Likes</p>
-            </li>
-            <li class="stat">
-                <h2>1.4K</h2>
-                <p>Photos</p>
-            </li>
-        </ul>
-    </div>
+    <img role="none" class="circle-top" src="images/bg-pattern-top.svg" alt="">
+    <img role="none" class="circle-bottom" src="images/bg-pattern-bottom.svg" alt="">
+    <main role="main">
+        <article role="article" class="card">
+            <img role="banner" class="headerImg" width="350" height="140" src="images/NormalCover.jpg" alt="">
+            <img role="img" class="pfp" src="images/NormalFace.jpg" alt="Picture of Victor Crest">
+            <header>
+                <h1>Lucifer Morningstar<span class="person__age">13.7 billion old</span></h1>
+                <h4 class="person__city">Los Angeles, CA</h4>
+            </header>
+            <ul role="list" class="social__details">
+                <li role="listitem" class="stat">
+                    <h2>80K</h2>
+                    <p>Followers</p>
+                </li>
+                <li role="listitem" class="stat">
+                    <h2>803K</h2>
+                    <p>Likes</p>
+                </li>
+                <li role="listitem" class="stat">
+                    <h2>1.4K</h2>
+                    <p>Photos</p>
+                </li>
+            </ul>
+        </article>
+    </main>
 </body>
+<script>
+    const pfp = document.querySelector('.pfp');
+    const headerImg = document.querySelector('.headerImg');
+    const name = document.querySelector('h1');
+    const city = document.querySelector('.person__city');
+    pfp.addEventListener('mouseover', function () {
+        headerImg.setAttribute('src', 'images/HellCover.jpg');
+        pfp.setAttribute('src', 'images/DevilFace.jpg');
+        pfp.style.border = '5px solid #ff0000';
+        pfp.style.boxShadow = 'box-shadow: 0px 15px 41px rgba(255, 0, 0, 0.25);';
+        html = `
+        <span class="red">Devil</span><span class="person__age">13.7 billion old</span>
+        `
+        name.innerHTML = html;
+        city.innerHTML = 'Hell';
+    });
+    pfp.addEventListener('mouseout', function () {
+        headerImg.setAttribute('src', 'images/NormalCover.jpg');
+        pfp.setAttribute('src', 'images/NormalFace.jpg');
+        pfp.style.border = '5px solid white';
+        pfp.style.boxShadow = 'none';
+        html = `
+        Lucifer Morningstar<span class="person__age">13.7 billion old</span>
+        `
+        name.innerHTML = html;
+        city.innerHTML = 'Los Angeles, CA';
+    });
+</script>
 
 </html>
