@@ -236,7 +236,7 @@ p {
 .legend-item:hover {
     --lightness: 70%;
     cursor: pointer;
-    transform: matrix(4, -2, 0, 1, 0, 1);
+    transform: translateY(-2px);
 }
 
 #clear {
