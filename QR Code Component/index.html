@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>QR Code Component</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script defer>
+			$(document).ready(function () {
+				$('.theme').click(function () {
+					if (document.body.classList.contains('lightmode')) {
+						$('body').removeClass('lightmode');
+						$('body').addClass('darkmode');
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Component</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-</head>
+						$('.theme').fadeOut();
+						document.querySelector('.theme').innerHTML = `
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_14_1465)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 22.5C16.9891 22.5 18.8968 21.7098 20.3033 20.3033C21.7098 18.8968 22.5 16.9891 22.5 15C22.5 13.0109 21.7098 11.1032 20.3033 9.6967C18.8968 8.29018 16.9891 7.5 15 7.5C13.0109 7.5 11.1032 8.29018 9.6967 9.6967C8.29018 11.1032 7.5 13.0109 7.5 15C7.5 16.9891 8.29018 18.8968 9.6967 20.3033C11.1032 21.7098 13.0109 22.5 15 22.5ZM15 0C15.373 0 15.7306 0.148158 15.9944 0.411881C16.2581 0.675604 16.4062 1.03329 16.4062 1.40625V4.21875C16.4062 4.59171 16.2581 4.9494 15.9944 5.21312C15.7306 5.47684 15.373 5.625 15 5.625C14.627 5.625 14.2694 5.47684 14.0056 5.21312C13.7419 4.9494 13.5938 4.59171 13.5938 4.21875V1.40625C13.5938 1.03329 13.7419 0.675604 14.0056 0.411881C14.2694 0.148158 14.627 0 15 0ZM15 24.375C15.373 24.375 15.7306 24.5232 15.9944 24.7869C16.2581 25.0506 16.4062 25.4083 16.4062 25.7812V28.5938C16.4062 28.9667 16.2581 29.3244 15.9944 29.5881C15.7306 29.8518 15.373 30 15 30C14.627 30 14.2694 29.8518 14.0056 29.5881C13.7419 29.3244 13.5938 28.9667 13.5938 28.5938V25.7812C13.5938 25.4083 13.7419 25.0506 14.0056 24.7869C14.2694 24.5232 14.627 24.375 15 24.375ZM4.39313 4.39313C4.52372 4.26245 4.67878 4.15878 4.84946 4.08806C5.02013 4.01733 5.20307 3.98093 5.38781 3.98093C5.57256 3.98093 5.7555 4.01733 5.92617 4.08806C6.09684 4.15878 6.25191 4.26245 6.3825 4.39313L8.37 6.3825C8.6184 6.64908 8.75363 7.00167 8.7472 7.36598C8.74077 7.73029 8.59319 8.07789 8.33554 8.33554C8.07789 8.59319 7.73029 8.74077 7.36598 8.7472C7.00167 8.75363 6.64908 8.6184 6.3825 8.37L4.395 6.3825C4.13166 6.11883 3.98374 5.76141 3.98374 5.38875C3.98374 5.01609 4.13166 4.65867 4.395 4.395L4.39313 4.39313ZM21.63 21.63C21.8937 21.3667 22.2511 21.2187 22.6238 21.2187C22.9964 21.2187 23.3538 21.3667 23.6175 21.63L25.6069 23.6175C25.8632 23.8826 26.0051 24.2378 26.002 24.6065C25.999 24.9752 25.8513 25.328 25.5907 25.5888C25.3301 25.8497 24.9774 25.9977 24.6087 26.0011C24.24 26.0045 23.8847 25.8629 23.6194 25.6069L21.63 23.6194C21.4993 23.4888 21.3957 23.3337 21.3249 23.163C21.2542 22.9924 21.2178 22.8094 21.2178 22.6247C21.2178 22.4399 21.2542 22.257 21.3249 22.0863C21.3957 21.9157 21.4993 21.7606 21.63 21.63ZM30 15C30 15.373 29.8518 15.7306 29.5881 15.9944C29.3244 16.2581 28.9667 16.4062 28.5938 16.4062H25.7812C25.4083 16.4062 25.0506 16.2581 24.7869 15.9944C24.5232 15.7306 24.375 15.373 24.375 15C24.375 14.627 24.5232 14.2694 24.7869 14.0056C25.0506 13.7419 25.4083 13.5938 25.7812 13.5938H28.5938C28.9667 13.5938 29.3244 13.7419 29.5881 14.0056C29.8518 14.2694 30 14.627 30 15ZM5.625 15C5.625 15.373 5.47684 15.7306 5.21312 15.9944C4.9494 16.2581 4.59171 16.4062 4.21875 16.4062H1.40625C1.03329 16.4062 0.675604 16.2581 0.411881 15.9944C0.148158 15.7306 0 15.373 0 15C0 14.627 0.148158 14.2694 0.411881 14.0056C0.675604 13.7419 1.03329 13.5938 1.40625 13.5938H4.21875C4.59171 13.5938 4.9494 13.7419 5.21312 14.0056C5.47684 14.2694 5.625 14.627 5.625 15ZM25.6069 4.39313C25.7376 4.52372 25.8412 4.67878 25.9119 4.84946C25.9827 5.02013 26.0191 5.20307 26.0191 5.38781C26.0191 5.57256 25.9827 5.7555 25.9119 5.92617C25.8412 6.09684 25.7376 6.25191 25.6069 6.3825L23.6175 8.37C23.4888 8.50816 23.3335 8.61898 23.161 8.69584C22.9885 8.7727 22.8023 8.81403 22.6135 8.81736C22.4247 8.82069 22.2371 8.78596 22.062 8.71523C21.8869 8.6445 21.7278 8.53923 21.5943 8.4057C21.4608 8.27216 21.3555 8.1131 21.2848 7.938C21.214 7.76289 21.1793 7.57534 21.1826 7.38652C21.186 7.1977 21.2273 7.01149 21.3042 6.83899C21.381 6.66649 21.4918 6.51124 21.63 6.3825L23.6175 4.395C23.8812 4.13166 24.2386 3.98374 24.6112 3.98374C24.9839 3.98374 25.3413 4.13166 25.605 4.395L25.6069 4.39313ZM8.37 21.63C8.63335 21.8937 8.78126 22.2511 8.78126 22.6238C8.78126 22.9964 8.63335 23.3538 8.37 23.6175L6.3825 25.6069C6.25284 25.7412 6.09772 25.8484 5.92619 25.9222C5.75465 25.996 5.57014 26.0349 5.38342 26.0366C5.19671 26.0383 5.01151 26.0028 4.83866 25.9322C4.6658 25.8616 4.50874 25.7572 4.37665 25.6252C4.24455 25.4933 4.14006 25.3363 4.06927 25.1635C3.99848 24.9907 3.96281 24.8056 3.96434 24.6189C3.96588 24.4321 4.00458 24.2476 4.0782 24.076C4.15182 23.9044 4.25888 23.7492 4.39313 23.6194L6.38063 21.63C6.51122 21.4993 6.66628 21.3957 6.83696 21.3249C7.00763 21.2542 7.19057 21.2178 7.37531 21.2178C7.56006 21.2178 7.743 21.2542 7.91367 21.3249C8.08434 21.3957 8.23941 21.4993 8.37 21.63Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_14_1465">
+<rect width="30" height="30" fill="white"/>
+</clipPath>
+</defs>
+</svg>
 
-<body>
-    <div class="card">
-        <img src="images/image-qr-code.png" alt="QR Code">
-        <div class="desc">
-            <h1>Improve your front-end skills by building projects</h1>
-            <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-        </div>
-    </div>
-</body>
 
+                        `;
+
+						$('.img-c *').fadeOut();
+
+						document.querySelector('.img-c').innerHTML = `
+                        <img class="hide" src="images/QR-code-dark.png" alt="QR Code" />
+                        `;
+
+						$('.img-c *').fadeIn();
+
+						$('.theme').fadeIn();
+					} else {
+						$('body').removeClass('lightmode');
+						$('body').addClass('darkmode');
+
+						$('.theme').fadeOut();
+						document.querySelector('.theme').innerHTML = `
+                        
+                        `;
+
+						$('.img-c *').fadeOut();
+
+						document.querySelector('.img-c').innerHTML = `
+                        <img class="hide" src="images/QR-code-dark.png" alt="QR Code" />
+                        `;
+
+						$('.img-c *').fadeIn();
+
+						$('.theme').fadeIn();
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body class="lightmode">
+		<div class="theme">
+			<svg class="icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M3.28125 15C3.28125 21.4688 8.53125 26.7188 15 26.7188C21.3938 26.7131 26.7188 21.0938 26.7188 15.4688C24.8438 16.4062 19.2188 18.2812 15.4688 14.5312C11.7188 10.7812 13.5938 5.15625 14.5312 3.28125C8.90625 3.28125 3.28125 8.60625 3.28125 15Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="card">
+			<div class="img-c">
+				<img src="images/QR-code-light.png" alt="QR Code" />
+			</div>
+			<div class="desc">
+				<h1>Visit my Website!</h1>
+				<p>Hey I'm Vihaan, A high school student who loves web development and design.</p>
+			</div>
+		</div>
+	</body>
 </html>
